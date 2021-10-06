@@ -9,14 +9,14 @@ import { WebSocketLink } from "@apollo/client/link/ws";
 import { getMainDefinition } from "@apollo/client/utilities";
 
 const wsLink = new WebSocketLink({
-  uri: "ws://localhost:4000/",
+  uri: "ws://floating-woodland-82349.herokuapp.com/",
   options: {
     reconnect: true,
   },
 });
 
 const httpLink = new HttpLink({
-  uri: "http://localhost:4000/",
+  uri: "https://floating-woodland-82349.herokuapp.com/",
 });
 
 const splitLink = split(
